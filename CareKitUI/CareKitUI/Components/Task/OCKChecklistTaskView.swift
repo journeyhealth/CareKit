@@ -93,7 +93,7 @@ open class OCKChecklistTaskView: OCKView, OCKTaskDisplayable {
     /// Handles events related to an `OCKTaskDisplayable` object.
     public weak var delegate: OCKTaskViewDelegate?
 
-    public var showsIconImage: Bool {
+    open var showsIconImage: Bool {
         return false
     }
  
