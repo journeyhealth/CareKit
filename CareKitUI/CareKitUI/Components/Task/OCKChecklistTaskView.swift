@@ -93,9 +93,14 @@ open class OCKChecklistTaskView: OCKView, OCKTaskDisplayable {
     /// Handles events related to an `OCKTaskDisplayable` object.
     public weak var delegate: OCKTaskViewDelegate?
 
+    public var showsIconImage: Bool {
+        return false
+    }
+ 
     /// The header that shows a `detailDisclosureImage`.
-    public let headerView = OCKHeaderView {
+    public lazy var headerView = OCKHeaderView {
         $0.showsDetailDisclosure = true
+        $0.showsIconImage = self.showsIconImage
     }
 
     /// Multi-line label beneath the checklist items.
